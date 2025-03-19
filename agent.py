@@ -4,8 +4,9 @@ import datetime
 import os
 from tzlocal import get_localzone_name
 
+credentials_path = "client_secret_126868835843-nmika7ldh47eqrmeln65h8vsaqh74ec5.apps.googleusercontent.com.json"
 agent = Agent(
-    tools=[GoogleCalendarTools(credentials_path="<PATH_TO_YOUR_CREDENTIALS_FILE>")],
+    tools=[GoogleCalendarTools(credentials_path=credentials_path)],
     show_tool_calls=True,
     instructions=[
         f"""
